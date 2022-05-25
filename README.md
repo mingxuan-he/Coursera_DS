@@ -1,9 +1,9 @@
 # Coursera Data Science Courses: Project Overview
  
 * Scraped over 1,800 Coursera courses using Python and beautifulsoup
+* Engineered features from the text of each course description to quantify the emphasis courses put on python, SQL, ML/DL, R, TensorFlow, and Google Cloud.
 
-WIP:
-* Engineered features from the text of each course description to quantify the emphasis courses put on python, SQL, ML/DL, AWS, and spark.
+WIP:  
 * Optimized Linear, Lasso, and Random Forest regressions to reach the best model
 * Built a client facing API using flask
 
@@ -11,7 +11,7 @@ WIP:
 
 **Python Version:** 3.7  
 **Packages:** pandas, numpy, json, beautifulsoup, matplotlib, seaborn, flask  
-**Coursera Catalog API: ** https://build.coursera.org/app-platform/catalog/
+**Coursera Catalog API:** https://build.coursera.org/app-platform/catalog/
 
 ## Catalog API
 
@@ -50,11 +50,12 @@ I built a web scraper to scrape over 1800 DS courses on Coursera. With each cour
 * Course content rating (0-100%)
 * Course content ratings count
 
-## Data cleaning
+## Data cleaning & feature engineering
 * Merged instructor and partner names into the main dataset
 * Parsed course domains and subdomains out of nested column
 * Converted start date from unix timestamp to datetime, then transformed into courses' age in days
 * Made column for number of instructors
+* Made columns for two types of certificates available
 * Transformed primary language into regular string
 * Made columns for technical skills listed in the job description:
     * Python
