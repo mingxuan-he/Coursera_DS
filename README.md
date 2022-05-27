@@ -1,19 +1,19 @@
 # Coursera Data Science Courses: Project Overview
  
 * Scraped over 1,800 Coursera courses using Python and beautifulsoup
-* Engineered features from the text of each course description to quantify the emphasis courses put on python, SQL, ML/DL, R, TensorFlow, and Google Cloud.
+* Engineered features from the text of each course description to quantify the emphasis courses put on Python, SQL, ML, DL, R, TensorFlow, and Google Cloud.
 
 WIP:  
 * Optimized Linear, Lasso, and Random Forest regressions to reach the best model
 * Built a client facing API using flask
 
-## Code and Resources Used
+## Resources Used
 
 **Python Version:** 3.7  
 **Packages:** pandas, numpy, json, beautifulsoup, matplotlib, seaborn, flask  
 **Coursera Catalog API:** https://build.coursera.org/app-platform/catalog/
 
-## Catalog API
+## Data collection pt.1: Catalog API
 
 For the core data, I used customized queries to get json data from Coursera's Catalog API. The fields included in the API database are:  
 * Course title
@@ -21,7 +21,6 @@ For the core data, I used customized queries to get json data from Coursera's Ca
 * Course description
 * Course domains and subdomains
 * Course id
-* s12n id
 * Slug
 * Instructor id(s)
 * Partner (organization) id(s)
@@ -35,7 +34,7 @@ For the core data, I used customized queries to get json data from Coursera's Ca
 
 From there, I filtered courses with at lease one domain listed as "data science".
 
-## Web scraping
+## Data collection pt.2: Web scraping
 
 I built a web scraper to scrape over 1800 DS courses on Coursera. With each course, I got the following:  
 * Course star rating (0-5 stars)
@@ -70,6 +69,7 @@ I built a web scraper to scrape over 1800 DS courses on Coursera. With each cour
 The output file is courses_DS_cleaned.csv.
 
 ## Exploratory Data Analysis
+I examined correlations and data distributions for numerical variables, then value counts for categorical variables
 WIP
 
 ## Acknowledgements
